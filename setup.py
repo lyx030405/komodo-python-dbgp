@@ -24,6 +24,8 @@ class Dbgp_build_ext(build_ext):
                 plat = 'linux-x86_64'
             else:
                 plat = 'linux-x86'
+        elif "macosx" in self.plat_name:
+            plat = 'linux-x86_64'
         sourcepath = os.path.join(scriptdir, 'libs', plat)
         if os.path.exists(sourcepath):
             # not all platforms have binaries
